@@ -11,9 +11,9 @@ Capstone project repository for Deliverable 1 (CSE 616: Lab on Web Engineering)
 3. Install dependencies in each folder (`frontend`, `backend`) when code is added.
 
 ## Team
-- Alice (Scrum Master, QA)
-- Bob (Frontend, DevOps)
-- Charlie (Backend, Documentation)
+- Sajid Shahriar Sanam (Scrum Master/Project Lead, QA/Tester)
+- Israt Zannat (Frontend, DevOps/Deployment)
+- Shajeda Isnat (Backend, Documentation Owner)
 
 ## Deliverable 1
 - Trello board initialized
