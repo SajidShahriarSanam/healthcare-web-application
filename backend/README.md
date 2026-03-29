@@ -1,4 +1,4 @@
-# Healthcare Backend (Deliverable 3 - Backend MVP)
+# Healthcare Backend 
 
 ## Tech Stack
 - Node.js + Express
