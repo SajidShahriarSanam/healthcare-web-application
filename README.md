@@ -63,7 +63,6 @@ healthcare-web-application/
 │   ├── src/                         # Backend source code
 │   ├── healthcare-frontend/         # Frontend (React app inside backend)
 │   ├── tests/
-│   └── package.json
 │
 ├── frontend/                        # (Currently unused / placeholder)
 │
