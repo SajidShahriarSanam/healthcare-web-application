@@ -99,9 +99,9 @@ Note: The frontend is currently placed inside the backend directory due to deplo
 
 ## 👥 Team Members
 
-- Sajid Shahriar Sanam (Project Lead / Backend / QA)
-- Israt Zannat (Frontend / Deployment)
-- Shajeda Isnat (Backend / Documentation)
+- Sajid Shahriar Sanam (Project Lead / Deployment / Documentation)
+- Israt Zannat (Frontend)
+- Shajeda Isnat (Backend)
 
 ---
 
