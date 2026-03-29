@@ -71,6 +71,7 @@ healthcare-web-application/
 
 Note: The frontend is currently placed inside the backend directory due to deployment configuration.
 
+```
 ## ⚙️ Key Features
 
 - 🔐 User Authentication (JWT)
