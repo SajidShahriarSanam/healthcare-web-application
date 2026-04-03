@@ -14,10 +14,9 @@ function Navbar() {
     <nav
       className="navbar navbar-expand-lg"
       style={{
-        background: "rgba(255,255,255,0.72)",
+        background: "rgba(255,255,255,0.75)",
         backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-        borderBottom: "1px solid rgba(17, 184, 156, 0.12)",
+        borderBottom: "1px solid rgba(111, 212, 255, 0.2)",
         boxShadow: "0 8px 25px rgba(20, 70, 90, 0.05)",
         position: "sticky",
         top: 0,
@@ -25,16 +24,40 @@ function Navbar() {
       }}
     >
       <div className="container py-2">
+
+        {/* 🔥 NEW LOGO */}
         <Link
-          className="navbar-brand fw-bold"
+          className="navbar-brand d-flex align-items-center gap-2"
           to="/"
-          style={{
-            fontSize: "1.7rem",
-            color: "#143b52",
-            letterSpacing: "0.4px",
-          }}
+          style={{ textDecoration: "none" }}
         >
-          Medi<span style={{ color: "#11b89c" }}>Care</span>
+          <div
+            style={{
+              width: "36px",
+              height: "36px",
+              borderRadius: "10px",
+              background: "linear-gradient(135deg, #ff8aa1, #6fd4ff)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontWeight: "900",
+              boxShadow: "0 8px 18px rgba(111, 212, 255, 0.25)",
+            }}
+          >
+            ⚕
+          </div>
+
+          <span
+            style={{
+              fontSize: "1.4rem",
+              fontWeight: "800",
+              color: "#24495e",
+              letterSpacing: "0.3px",
+            }}
+          >
+            VitaPulse
+          </span>
         </Link>
 
         <button
@@ -42,13 +65,9 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
           style={{
-            border: "1px solid rgba(17, 184, 156, 0.35)",
+            border: "1px solid rgba(111, 212, 255, 0.4)",
             borderRadius: "10px",
-            boxShadow: "none",
           }}
         >
           <span className="navbar-toggler-icon"></span>
@@ -56,27 +75,14 @@ function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarContent">
           <div className="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-            <Link
-              className="nav-link"
-              to="/"
-              style={{
-                color: "#4f6f82",
-                fontWeight: "600",
-              }}
-            >
+
+            <Link className="nav-link fw-semibold" to="/" style={{ color: "#4f6f82" }}>
               Home
             </Link>
 
             {!isLoggedIn ? (
               <>
-                <Link
-                  className="nav-link"
-                  to="/login"
-                  style={{
-                    color: "#4f6f82",
-                    fontWeight: "600",
-                  }}
-                >
+                <Link className="nav-link fw-semibold" to="/login" style={{ color: "#4f6f82" }}>
                   Login
                 </Link>
 
@@ -84,14 +90,13 @@ function Navbar() {
                   to="/register"
                   className="btn ms-lg-2 mt-2 mt-lg-0"
                   style={{
-                    background:
-                      "linear-gradient(90deg, #11b89c 0%, #22c7d8 100%)",
+                    background: "linear-gradient(90deg, #ff8aa1, #6fd4ff)",
                     color: "#fff",
                     fontWeight: "600",
                     borderRadius: "14px",
                     padding: "10px 22px",
-                    boxShadow: "0 12px 24px rgba(34, 199, 216, 0.18)",
                     border: "none",
+                    boxShadow: "0 10px 20px rgba(111, 212, 255, 0.2)",
                   }}
                 >
                   Register
@@ -100,16 +105,13 @@ function Navbar() {
             ) : (
               <>
                 <Link
-                  className="nav-link"
+                  className="nav-link fw-semibold"
                   to={
                     user?.role === "doctor"
                       ? "/doctor-dashboard"
                       : "/patient-dashboard"
                   }
-                  style={{
-                    color: "#4f6f82",
-                    fontWeight: "600",
-                  }}
+                  style={{ color: "#4f6f82" }}
                 >
                   Dashboard
                 </Link>
@@ -117,23 +119,17 @@ function Navbar() {
                 {user?.role === "patient" && (
                   <>
                     <Link
-                      className="nav-link"
+                      className="nav-link fw-semibold"
                       to="/book-appointment"
-                      style={{
-                        color: "#4f6f82",
-                        fontWeight: "600",
-                      }}
+                      style={{ color: "#4f6f82" }}
                     >
                       Book Appointment
                     </Link>
 
                     <Link
-                      className="nav-link"
+                      className="nav-link fw-semibold"
                       to="/my-appointments"
-                      style={{
-                        color: "#4f6f82",
-                        fontWeight: "600",
-                      }}
+                      style={{ color: "#4f6f82" }}
                     >
                       My Appointments
                     </Link>
@@ -145,12 +141,12 @@ function Navbar() {
                   className="btn ms-lg-2 mt-2 mt-lg-0"
                   style={{
                     background: "#ffffff",
-                    color: "#148a7b",
-                    border: "1px solid #cdeee8",
+                    color: "#2f8a70",
+                    border: "1px solid #d8f3ec",
                     borderRadius: "14px",
                     padding: "10px 20px",
                     fontWeight: "600",
-                    boxShadow: "0 10px 24px rgba(20, 138, 123, 0.07)",
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
                   }}
                 >
                   Logout

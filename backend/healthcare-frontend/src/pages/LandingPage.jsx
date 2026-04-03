@@ -4,44 +4,24 @@ function LandingPage() {
   const user = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
 
-  const features = [
+  const featureCards = [
     {
       icon: "🩺",
-      title: "Trusted Consultation",
-      text: "Connect with qualified doctors and specialists with confidence.",
+      title: "Consult with Ease",
+      text: "Reach doctors quickly and manage care without confusion.",
+      color: "#fff4f4",
     },
     {
-      icon: "📅",
-      title: "Quick Appointments",
-      text: "Book your doctor visit in just a few clicks without hassle.",
+      icon: "📆",
+      title: "Simple Scheduling",
+      text: "Book, view, and manage appointments in one smooth flow.",
+      color: "#f4fbff",
     },
     {
-      icon: "💊",
-      title: "Health Support",
-      text: "Track your care journey with updates and organized records.",
-    },
-    {
-      icon: "🛡️",
-      title: "Safe & Secure",
-      text: "Your healthcare data stays protected with modern safeguards.",
-    },
-  ];
-
-  const steps = [
-    {
-      number: "01",
-      title: "Create Account",
-      text: "Sign up as a patient or doctor and get started easily.",
-    },
-    {
-      number: "02",
-      title: "Choose Service",
-      text: "Find doctors, schedule appointments, and explore care options.",
-    },
-    {
-      number: "03",
-      title: "Manage Care",
-      text: "Stay updated and manage your appointments from one place.",
+      icon: "🧾",
+      title: "Care Records",
+      text: "Keep important health information organized in one place.",
+      color: "#f7fff8",
     },
   ];
 
@@ -50,150 +30,169 @@ function LandingPage() {
       style={{
         minHeight: "100vh",
         background:
-          "linear-gradient(135deg, #f4fbff 0%, #eefaf6 45%, #fdfcff 100%)",
+          "linear-gradient(180deg, #fff9fb 0%, #f7fcff 45%, #f4fff8 100%)",
+        fontFamily: "'Segoe UI', sans-serif",
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Segoe UI', sans-serif",
       }}
     >
-      {/* Watermark Background */}
+      {/* soft background shapes */}
       <div
         style={{
           position: "absolute",
-          top: "8%",
-          left: "4%",
-          fontSize: "220px",
-          opacity: 0.05,
-          pointerEvents: "none",
+          top: "-60px",
+          left: "-60px",
+          width: "220px",
+          height: "220px",
+          borderRadius: "50%",
+          background: "rgba(255, 182, 193, 0.18)",
+          filter: "blur(10px)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          right: "-50px",
+          top: "120px",
+          width: "240px",
+          height: "240px",
+          borderRadius: "50%",
+          background: "rgba(131, 220, 255, 0.18)",
+          filter: "blur(10px)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          left: "8%",
+          bottom: "12%",
+          fontSize: "180px",
+          opacity: 0.04,
           userSelect: "none",
-          fontWeight: "700",
-          color: "#0b8f7a",
+          pointerEvents: "none",
         }}
       >
         ⚕
       </div>
 
-      <div
-        style={{
-          position: "absolute",
-          bottom: "10%",
-          right: "5%",
-          fontSize: "200px",
-          opacity: 0.05,
-          pointerEvents: "none",
-          userSelect: "none",
-          color: "#1b6ca8",
-        }}
-      >
-        +
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          top: "20%",
-          right: "12%",
-          width: "220px",
-          height: "220px",
-          background:
-            "radial-gradient(circle, rgba(57,197,187,0.18) 0%, rgba(57,197,187,0) 70%)",
-          borderRadius: "50%",
-          pointerEvents: "none",
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "18%",
-          left: "10%",
-          width: "250px",
-          height: "250px",
-          background:
-            "radial-gradient(circle, rgba(106,145,255,0.15) 0%, rgba(106,145,255,0) 70%)",
-          borderRadius: "50%",
-          pointerEvents: "none",
-        }}
-      />
-
       <div className="container py-5 position-relative">
-        {/* Hero */}
-        <div className="row align-items-center py-5">
+        {/* HERO */}
+        <div className="row align-items-center py-4 py-lg-5">
           <div className="col-lg-6 mb-5 mb-lg-0">
+            {/* New Logo / Brand */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                marginBottom: "14px",
+              }}
+            >
+              <div
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "12px",
+                  background: "linear-gradient(135deg, #ff8aa1, #6fd4ff)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#fff",
+                  fontWeight: "900",
+                  boxShadow: "0 10px 20px rgba(111, 212, 255, 0.20)",
+                }}
+              >
+                ⚕
+              </div>
+              <span
+                style={{
+                  fontWeight: "800",
+                  color: "#24495e",
+                  fontSize: "1.1rem",
+                  letterSpacing: "0.3px",
+                }}
+              >
+                VitaPulse Health
+              </span>
+            </div>
+
             <div
               style={{
                 display: "inline-block",
-                background: "rgba(16, 150, 120, 0.10)",
-                color: "#0d8d78",
                 padding: "8px 16px",
                 borderRadius: "999px",
+                background: "#ffffff",
+                color: "#2d7f78",
                 fontWeight: "600",
                 fontSize: "14px",
-                border: "1px solid rgba(13, 141, 120, 0.18)",
+                boxShadow: "0 8px 20px rgba(40, 110, 120, 0.08)",
               }}
             >
-              Medical Care • Smarter • Safer
+              Friendly Digital Healthcare
             </div>
 
             <h1
               className="fw-bold mt-4"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                lineHeight: "1.1",
-                color: "#143b52",
+                fontSize: "clamp(2.4rem, 5vw, 4rem)",
+                lineHeight: "1.12",
+                color: "#183b56",
+                maxWidth: "560px",
               }}
             >
-              Your Health,
+              Care that feels
+              <span style={{ color: "#e07a8d" }}> closer</span>,
               <br />
-              Reimagined
+              calmer, and easier.
             </h1>
 
             <p
               className="mt-4"
               style={{
+                color: "#5f788b",
                 fontSize: "18px",
-                color: "#4f6f82",
+                lineHeight: "1.9",
                 maxWidth: "560px",
-                lineHeight: "1.8",
               }}
             >
-              A modern healthcare platform for booking appointments, connecting
-              with doctors, and managing medical support with comfort,
-              simplicity, and trust.
+              A patient-friendly medical platform to book appointments, connect
+              with doctors, and keep your healthcare journey more organized and
+              stress-free.
             </p>
 
             {!token ? (
               <div className="d-flex flex-wrap gap-3 mt-4">
                 <Link
-                  to="/login"
-                  className="btn"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #11b89c 0%, #22c7d8 100%)",
-                    color: "#fff",
-                    borderRadius: "14px",
-                    padding: "12px 28px",
-                    fontWeight: "600",
-                    boxShadow: "0 12px 30px rgba(34, 199, 216, 0.22)",
-                  }}
-                >
-                  Login Now
-                </Link>
-
-                <Link
                   to="/register"
                   className="btn"
                   style={{
-                    background: "#ffffff",
-                    color: "#148a7b",
-                    border: "1px solid #cdeee8",
-                    borderRadius: "14px",
-                    padding: "12px 28px",
-                    fontWeight: "600",
-                    boxShadow: "0 10px 25px rgba(20, 138, 123, 0.08)",
+                    background:
+                      "linear-gradient(90deg, #ff8aa1 0%, #6fd4ff 100%)",
+                    color: "#fff",
+                    borderRadius: "16px",
+                    padding: "13px 28px",
+                    fontWeight: "700",
+                    border: "none",
+                    boxShadow: "0 14px 28px rgba(111, 212, 255, 0.22)",
                   }}
                 >
-                  Create Account
+                  Start Here
+                </Link>
+
+                <Link
+                  to="/login"
+                  className="btn"
+                  style={{
+                    background: "#ffffff",
+                    color: "#245c70",
+                    borderRadius: "16px",
+                    padding: "13px 28px",
+                    fontWeight: "700",
+                    border: "1px solid #e7eef3",
+                    boxShadow: "0 10px 22px rgba(36, 92, 112, 0.06)",
+                  }}
+                >
+                  Sign In
                 </Link>
               </div>
             ) : (
@@ -207,12 +206,13 @@ function LandingPage() {
                   className="btn"
                   style={{
                     background:
-                      "linear-gradient(90deg, #11b89c 0%, #22c7d8 100%)",
+                      "linear-gradient(90deg, #ff8aa1 0%, #6fd4ff 100%)",
                     color: "#fff",
-                    borderRadius: "14px",
-                    padding: "12px 28px",
-                    fontWeight: "600",
-                    boxShadow: "0 12px 30px rgba(34, 199, 216, 0.22)",
+                    borderRadius: "16px",
+                    padding: "13px 28px",
+                    fontWeight: "700",
+                    border: "none",
+                    boxShadow: "0 14px 28px rgba(111, 212, 255, 0.22)",
                   }}
                 >
                   Go to Dashboard
@@ -224,139 +224,96 @@ function LandingPage() {
                     className="btn"
                     style={{
                       background: "#ffffff",
-                      color: "#148a7b",
-                      border: "1px solid #cdeee8",
-                      borderRadius: "14px",
-                      padding: "12px 28px",
-                      fontWeight: "600",
-                      boxShadow: "0 10px 25px rgba(20, 138, 123, 0.08)",
+                      color: "#245c70",
+                      borderRadius: "16px",
+                      padding: "13px 28px",
+                      fontWeight: "700",
+                      border: "1px solid #e7eef3",
+                      boxShadow: "0 10px 22px rgba(36, 92, 112, 0.06)",
                     }}
                   >
-                    Book Appointment
+                    Book Visit
                   </Link>
                 )}
               </div>
             )}
 
-            <div className="row g-3 mt-4">
-              <div className="col-6 col-md-3">
+            {/* Updated info chips */}
+            <div className="d-flex flex-wrap gap-3 mt-5">
+              {[
+                "1.2k+ Active Consultations",
+                "320+ Verified Doctors",
+                "18k+ Health Records Managed",
+                "99.2% Care Accuracy",
+              ].map((item, index) => (
                 <div
+                  key={index}
                   style={{
-                    background: "rgba(255,255,255,0.7)",
-                    borderRadius: "18px",
-                    padding: "16px",
-                    textAlign: "center",
-                    boxShadow: "0 12px 30px rgba(19, 81, 97, 0.08)",
-                    border: "1px solid rgba(255,255,255,0.9)",
+                    background: "#ffffffcc",
+                    color: "#315368",
+                    padding: "10px 16px",
+                    borderRadius: "999px",
+                    fontWeight: "600",
+                    boxShadow: "0 8px 20px rgba(40, 110, 120, 0.08)",
+                    border: "1px solid #edf3f6",
+                    backdropFilter: "blur(6px)",
                   }}
                 >
-                  <h4 className="fw-bold mb-1" style={{ color: "#0e927f" }}>
-                    500+
-                  </h4>
-                  <small style={{ color: "#5c7586" }}>Doctors</small>
+                  {item}
                 </div>
-              </div>
-
-              <div className="col-6 col-md-3">
-                <div
-                  style={{
-                    background: "rgba(255,255,255,0.7)",
-                    borderRadius: "18px",
-                    padding: "16px",
-                    textAlign: "center",
-                    boxShadow: "0 12px 30px rgba(19, 81, 97, 0.08)",
-                    border: "1px solid rgba(255,255,255,0.9)",
-                  }}
-                >
-                  <h4 className="fw-bold mb-1" style={{ color: "#0e927f" }}>
-                    10k+
-                  </h4>
-                  <small style={{ color: "#5c7586" }}>Patients</small>
-                </div>
-              </div>
-
-              <div className="col-6 col-md-3">
-                <div
-                  style={{
-                    background: "rgba(255,255,255,0.7)",
-                    borderRadius: "18px",
-                    padding: "16px",
-                    textAlign: "center",
-                    boxShadow: "0 12px 30px rgba(19, 81, 97, 0.08)",
-                    border: "1px solid rgba(255,255,255,0.9)",
-                  }}
-                >
-                  <h4 className="fw-bold mb-1" style={{ color: "#0e927f" }}>
-                    98%
-                  </h4>
-                  <small style={{ color: "#5c7586" }}>Satisfaction</small>
-                </div>
-              </div>
-
-              <div className="col-6 col-md-3">
-                <div
-                  style={{
-                    background: "rgba(255,255,255,0.7)",
-                    borderRadius: "18px",
-                    padding: "16px",
-                    textAlign: "center",
-                    boxShadow: "0 12px 30px rgba(19, 81, 97, 0.08)",
-                    border: "1px solid rgba(255,255,255,0.9)",
-                  }}
-                >
-                  <h4 className="fw-bold mb-1" style={{ color: "#0e927f" }}>
-                    24/7
-                  </h4>
-                  <small style={{ color: "#5c7586" }}>Support</small>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Right Side Medical Card */}
+          {/* RIGHT VISUAL */}
           <div className="col-lg-6">
             <div
               style={{
                 position: "relative",
-                background: "rgba(255,255,255,0.65)",
-                backdropFilter: "blur(10px)",
-                borderRadius: "30px",
-                padding: "35px",
-                boxShadow: "0 20px 50px rgba(34, 96, 125, 0.12)",
-                border: "1px solid rgba(255,255,255,0.85)",
-                overflow: "hidden",
+                background: "rgba(255,255,255,0.78)",
+                borderRadius: "32px",
+                padding: "30px",
+                boxShadow: "0 24px 55px rgba(42, 98, 114, 0.10)",
+                border: "1px solid rgba(255,255,255,0.95)",
               }}
             >
               <div
                 style={{
                   position: "absolute",
-                  top: "-35px",
-                  right: "-35px",
-                  width: "120px",
-                  height: "120px",
-                  borderRadius: "50%",
-                  background:
-                    "linear-gradient(135deg, rgba(17,184,156,0.18), rgba(34,199,216,0.08))",
+                  right: "18px",
+                  top: "18px",
+                  background: "#fef3f6",
+                  color: "#d96d84",
+                  borderRadius: "999px",
+                  padding: "7px 14px",
+                  fontWeight: "700",
+                  fontSize: "13px",
                 }}
-              />
+              >
+                Health First
+              </div>
 
-              <div className="row g-3">
+              <div className="row g-3 align-items-stretch">
                 <div className="col-12">
                   <div
                     style={{
-                      background:
-                        "linear-gradient(135deg, #d9fff7 0%, #f7ffff 100%)",
-                      borderRadius: "22px",
+                      borderRadius: "24px",
                       padding: "24px",
-                      border: "1px solid #d9f5f0",
+                      background:
+                        "linear-gradient(135deg, #fff1f5 0%, #f1fbff 100%)",
+                      minHeight: "170px",
                     }}
                   >
-                    <h4 className="fw-bold" style={{ color: "#12465a" }}>
-                      Smart Patient Care
-                    </h4>
-                    <p className="mb-0" style={{ color: "#5c7586" }}>
-                      Manage appointments, doctors, and health support in one
-                      beautiful and organized platform.
+                    <div style={{ fontSize: "52px" }}>👩‍⚕️</div>
+                    <h3
+                      className="fw-bold mt-2 mb-2"
+                      style={{ color: "#24495e" }}
+                    >
+                      A softer healthcare experience
+                    </h3>
+                    <p className="mb-0" style={{ color: "#617c8e" }}>
+                      Designed for patients and doctors who want a clear,
+                      welcoming, and easy-to-use care platform.
                     </p>
                   </div>
                 </div>
@@ -364,67 +321,75 @@ function LandingPage() {
                 <div className="col-6">
                   <div
                     style={{
-                      background: "#ffffff",
-                      borderRadius: "20px",
+                      background: "#f7fff9",
+                      borderRadius: "22px",
                       padding: "22px",
-                      textAlign: "center",
-                      boxShadow: "0 12px 25px rgba(20, 138, 123, 0.07)",
+                      height: "100%",
+                      boxShadow: "inset 0 0 0 1px #e6f5eb",
                     }}
                   >
-                    <div style={{ fontSize: "34px" }}>🧑‍⚕️</div>
-                    <h6 className="mt-2 fw-bold" style={{ color: "#12465a" }}>
-                      Verified Doctors
+                    <div style={{ fontSize: "34px" }}>💗</div>
+                    <h6 className="fw-bold mt-2 mb-1" style={{ color: "#24495e" }}>
+                      Caring Design
                     </h6>
+                    <small style={{ color: "#6b8392" }}>
+                      Made to feel gentle and simple.
+                    </small>
                   </div>
                 </div>
 
                 <div className="col-6">
                   <div
                     style={{
-                      background: "#ffffff",
-                      borderRadius: "20px",
+                      background: "#f7f9ff",
+                      borderRadius: "22px",
                       padding: "22px",
-                      textAlign: "center",
-                      boxShadow: "0 12px 25px rgba(20, 138, 123, 0.07)",
+                      height: "100%",
+                      boxShadow: "inset 0 0 0 1px #e8eefb",
                     }}
                   >
-                    <div style={{ fontSize: "34px" }}>🏥</div>
-                    <h6 className="mt-2 fw-bold" style={{ color: "#12465a" }}>
-                      Easy Booking
+                    <div style={{ fontSize: "34px" }}>🗂️</div>
+                    <h6 className="fw-bold mt-2 mb-1" style={{ color: "#24495e" }}>
+                      Organized Flow
                     </h6>
+                    <small style={{ color: "#6b8392" }}>
+                      Easy booking and cleaner records.
+                    </small>
                   </div>
                 </div>
 
                 <div className="col-12">
                   <div
                     style={{
-                      background:
-                        "linear-gradient(135deg, #f4faff 0%, #ffffff 100%)",
+                      background: "#ffffff",
                       borderRadius: "22px",
-                      padding: "22px",
-                      border: "1px dashed #cfe7f0",
+                      padding: "18px 20px",
+                      border: "1px dashed #e7edf2",
                     }}
                   >
                     <div className="d-flex justify-content-between align-items-center flex-wrap gap-2">
                       <div>
-                        <h6 className="fw-bold mb-1" style={{ color: "#12465a" }}>
-                          Care with Comfort
-                        </h6>
-                        <small style={{ color: "#5c7586" }}>
-                          Designed to make medical services easier and faster.
+                        <div
+                          className="fw-bold"
+                          style={{ color: "#24495e", fontSize: "15px" }}
+                        >
+                          Patient-friendly portal
+                        </div>
+                        <small style={{ color: "#6b8392" }}>
+                          Book, check, and manage medical support easily.
                         </small>
                       </div>
                       <span
                         style={{
-                          background: "#e8fbf5",
-                          color: "#0d8d78",
-                          padding: "8px 14px",
+                          background: "#eefcf6",
+                          color: "#2f8a70",
+                          padding: "8px 12px",
                           borderRadius: "999px",
-                          fontWeight: "600",
-                          fontSize: "13px",
+                          fontSize: "12px",
+                          fontWeight: "700",
                         }}
                       >
-                        Medical Platform
+                        Easy to Use
                       </span>
                     </div>
                   </div>
@@ -434,92 +399,112 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Features */}
-        <div className="text-center mt-4 mb-4">
-          <h2 className="fw-bold" style={{ color: "#143b52" }}>
-            Healthcare Made Simpler
+
+        {/* FEATURES */}
+        <div className="pt-4 pb-2 text-center">
+          <h2 className="fw-bold" style={{ color: "#183b56" }}>
+            What makes it feel different
           </h2>
-          <p style={{ color: "#5c7586" }}>
-            Modern features to improve your care experience
+          <p style={{ color: "#667f90" }}>
+            A cleaner and calmer medical experience for everyone
           </p>
         </div>
 
-        <div className="row g-4">
-          {features.map((item, index) => (
-            <div className="col-md-6 col-lg-3" key={index}>
+        <div className="row g-4 mt-1">
+          {featureCards.map((item, index) => (
+            <div className="col-md-4" key={index}>
               <div
                 className="h-100"
                 style={{
-                  background: "rgba(255,255,255,0.72)",
-                  borderRadius: "24px",
-                  padding: "28px 22px",
-                  boxShadow: "0 16px 35px rgba(27, 82, 99, 0.08)",
-                  border: "1px solid rgba(255,255,255,0.9)",
+                  background: item.color,
+                  borderRadius: "28px",
+                  padding: "28px",
+                  boxShadow: "0 16px 35px rgba(27, 82, 99, 0.06)",
+                  border: "1px solid rgba(255,255,255,0.95)",
                 }}
               >
                 <div style={{ fontSize: "36px" }}>{item.icon}</div>
-                <h5 className="fw-bold mt-3" style={{ color: "#143b52" }}>
+                <h4 className="fw-bold mt-3" style={{ color: "#1d455f" }}>
                   {item.title}
-                </h5>
-                <p style={{ color: "#5c7586", marginBottom: 0 }}>{item.text}</p>
+                </h4>
+                <p className="mb-0" style={{ color: "#647d8f" }}>
+                  {item.text}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Steps */}
-        <div className="text-center mt-5 pt-4 mb-4">
-          <h2 className="fw-bold" style={{ color: "#143b52" }}>
-            How It Works
+        {/* PROCESS */}
+        <div className="pt-5 mt-4 text-center">
+          <h2 className="fw-bold" style={{ color: "#183b56" }}>
+            Getting started is easy
           </h2>
-          <p style={{ color: "#5c7586" }}>
-            Start your journey in a few easy steps
+          <p style={{ color: "#667f90" }}>
+            A simpler path than traditional medical booking systems
           </p>
         </div>
 
-        <div className="row g-4 pb-5">
-          {steps.map((item, index) => (
+        <div className="row g-4 mt-1 pb-5">
+          {[
+            {
+              no: "01",
+              title: "Sign Up",
+              text: "Create your account as patient or doctor in moments.",
+              bg: "#fff4f6",
+            },
+            {
+              no: "02",
+              title: "Book a Visit",
+              text: "Choose a doctor, date, and reason without complexity.",
+              bg: "#f4fbff",
+            },
+            {
+              no: "03",
+              title: "Stay Updated",
+              text: "Track appointment progress and care information easily.",
+              bg: "#f6fff8",
+            },
+          ].map((step, index) => (
             <div className="col-md-4" key={index}>
               <div
-                className="h-100 text-center"
+                className="h-100 text-start"
                 style={{
-                  background:
-                    "linear-gradient(180deg, rgba(255,255,255,0.8), rgba(245,252,255,0.95))",
-                  borderRadius: "26px",
-                  padding: "30px 24px",
-                  boxShadow: "0 18px 40px rgba(27, 82, 99, 0.08)",
-                  border: "1px solid rgba(255,255,255,0.95)",
+                  background: step.bg,
+                  borderRadius: "28px",
+                  padding: "28px",
+                  boxShadow: "0 16px 35px rgba(27, 82, 99, 0.06)",
                 }}
               >
                 <div
                   style={{
-                    width: "72px",
-                    height: "72px",
-                    lineHeight: "72px",
-                    margin: "0 auto 18px",
-                    borderRadius: "50%",
-                    background:
-                      "linear-gradient(135deg, #11b89c 0%, #22c7d8 100%)",
-                    color: "#fff",
-                    fontWeight: "700",
-                    fontSize: "24px",
-                    boxShadow: "0 10px 20px rgba(34, 199, 216, 0.20)",
+                    width: "58px",
+                    height: "58px",
+                    borderRadius: "18px",
+                    background: "#ffffff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: "800",
+                    color: "#df718b",
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
                   }}
                 >
-                  {item.number}
+                  {step.no}
                 </div>
-                <h5 className="fw-bold" style={{ color: "#143b52" }}>
-                  {item.title}
-                </h5>
-                <p style={{ color: "#5c7586", marginBottom: 0 }}>{item.text}</p>
+                <h4 className="fw-bold mt-4" style={{ color: "#1d455f" }}>
+                  {step.title}
+                </h4>
+                <p className="mb-0" style={{ color: "#647d8f" }}>
+                  {step.text}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="text-center pb-4" style={{ color: "#7390a0" }}>
-          © 2026 MediCare • Better Care, Better Experience
+        <div className="text-center pb-4" style={{ color: "#8094a0" }}>
+          © 2026 VitaPulse Health • Smart Healthcare Platform
         </div>
       </div>
     </div>
